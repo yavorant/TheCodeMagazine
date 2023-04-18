@@ -1,17 +1,22 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
+body {
   font-family: sans-serif;
   color: #444;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
 }
 
 h1,
 h2,
 h3 {
-
   color: #1098ad;
 }
 
@@ -76,12 +81,45 @@ footer p {
 
 }
 
-.main-header {
-  background-color: #f7f7f7;
+
+li:first-child {
+  font-weight: bold;
 }
 
-aside {
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  color: tomato;
+}
+
+li:nth-child(odd) {
+  color: green;
+}
+
+/* Misconception: won't work  */
+article p:first-child {
+  color: yellow;
+}
+
+/* styling links */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orange;
+  font-weight: bold;
+  text-decoration: underline dotted magenta;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
 }
