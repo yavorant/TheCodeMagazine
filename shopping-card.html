@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping card</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: sans-serif;
       line-height: 1.4;
@@ -16,10 +21,29 @@
       text-transform: uppercase;
       text-align: center;
       background-color: #9999993d;
+      padding: 20px;
     }
 
     article {
       border: 3px solid black;
+      width: 825px;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    article::before {
+      content: "SALE";
+      color: #fff;
+      background-color: red;
+      width: 70px;
+      height: 20px;
+      padding: 5px;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: .3rem;
+      position: absolute;
+      left: -40px;
+      top: -15px;
     }
 
     strong {
@@ -30,6 +54,14 @@
       text-transform: uppercase;
       color: gray;
       font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+
+    .info {
+      display: inline-block;
+      margin-bottom: 20px;
+
     }
 
     .info:link,
@@ -42,8 +74,18 @@
       text-decoration: none;
     }
 
+    .ready {
+      margin-bottom: 10px;
+    }
+
     h3 {
+      margin-bottom: 10px;
       text-transform: uppercase;
+    }
+
+    ul {
+      margin-bottom: 30px;
+      margin-left: 20px;
     }
 
     button {
@@ -52,6 +94,9 @@
       background-color: #000;
       text-transform: uppercase;
       font-size: 20px;
+      width: 100%;
+      padding: 20px 0;
+      border-top: 3px solid black;
     }
 
     button:hover,
@@ -59,6 +104,38 @@
     button:visited {
       color: #000;
       background-color: #fff;
+    }
+
+    .cube {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-bottom: 20px;
+      margin-right: 10px;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .brown {
+      background-color: brown;
     }
 
   </style>
@@ -70,8 +147,16 @@
     <img src="https://i.ibb.co/Jr7Wh1d/challenges.jpg" width="250" alt="legs">
     <p><strong>$65.00</strong></p>
     <p class="shipping_cost">Free shipping</p>
-    <p>Ready to dress up or down, these classic canvas Chucks are an everyday wardrobe staple.</p>
+    <p class="ready">Ready to dress up or down, these classic canvas Chucks are an everyday wardrobe staple.</p>
     <a class="info" href="#">More information &rarr;</a>
+    <div>
+      <div class="cube black"></div>
+      <div class="cube blue"></div>
+      <div class="cube red"></div>
+      <div class="cube orange"></div>
+      <div class="cube green"></div>
+      <div class="cube brown"></div>
+    </div>
     <h3>Product details</h3>
     <ul>
       <li>Lightweight, durable canvas sneaker</li>
