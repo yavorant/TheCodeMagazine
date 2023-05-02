@@ -8,6 +8,7 @@
   <title>Shopping card</title>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
@@ -138,14 +139,30 @@
       background-color: brown;
     }
 
-    /* position: */
-    .first-column {}
+    /* position three columns with float layout */
+    .first-column {
+      float: left;
+    }
 
-    .second-column {}
+    .second-column {
+      float: left;
+      max-width: 245px;
+      margin-left: 40px;
+      margin-top: 10px;
+    }
 
-    .third-column {}
+    .third-column {
+      float: right;
+      max-width: 245px;
+      margin-left: 40px;
+      margin-top: 20px;
+    }
 
-    .btn {}
+    .clearfix {
+      content: "";
+      clear: both;
+      display: block;
+    }
 
   </style>
 </head>
@@ -183,7 +200,7 @@
       </ul>
     </div>
 
-    <button class="btn">Add to cart</button>
+    <button class="btn clearfix">Add to cart</button>
   </article>
 
   <p>
