@@ -221,4 +221,15 @@ h1::first-letter {
   color: greenyellow;
 } */
 
-/* FLOAT */
+/* FLOATS */
+
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  margin-left: 20px;
+  margin-top: 10px;
+  float: left;
+}
