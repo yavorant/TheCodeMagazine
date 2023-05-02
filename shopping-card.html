@@ -148,17 +148,33 @@
       float: left;
       max-width: 245px;
       margin-left: 40px;
-      margin-top: 10px;
+      margin-top: 20px;
     }
 
     .third-column {
       float: right;
       max-width: 245px;
       margin-left: 40px;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .clearfix {
+      content: "";
+      clear: both;
+      display: block;
+    }
+
+    /* position price and offer with float layout */
+    .shipping_price {
+      float: left;
+    }
+
+    .shipping_cost {
+      float: right;
+      margin-top: 8px;
+    }
+
+    .price-and-offer::after {
       content: "";
       clear: both;
       display: block;
@@ -176,8 +192,10 @@
 
     <!-- second column: -->
     <div class="second-column">
-      <p><strong>$65.00</strong></p>
-      <p class="shipping_cost">Free shipping</p>
+      <div class="price-and-offer">
+        <p class="shipping_price"><strong>$65.00</strong></p>
+        <p class="shipping_cost">Free shipping</p>
+      </div>
       <p class="ready">Ready to dress up or down, these classic canvas Chucks are an everyday wardrobe staple.</p>
       <a class="info" href="#">More information &rarr;</a>
       <div>
