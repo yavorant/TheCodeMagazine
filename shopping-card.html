@@ -111,7 +111,7 @@
       width: 20px;
       height: 20px;
       margin-bottom: 20px;
-      margin-right: 10px;
+      /* margin-right: 10px; */
     }
 
     .black {
@@ -138,14 +138,54 @@
       background-color: brown;
     }
 
-    /* position: */
+    /* position: FLEXBOX */
+
+
+    main {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      /* justify-content: space-between; */
+      /* flex: 0 0; */
+    }
+
     .first-column {}
 
-    .second-column {}
+    .second-column {
+      flex: 1;
+    }
 
-    .third-column {}
+    .third-column {
+      flex: 1;
+    }
 
     .btn {}
+
+    .const-and-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 10px;
+    }
+
+    .shipping_cost {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    .cubes {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .cube {
+      display: block;
+
+    }
 
   </style>
 </head>
@@ -154,34 +194,39 @@
   <article>
     <h2>Converse Chuck Taylor All Star Low Top</h2>
 
-    <!-- first column: -->
-    <img src="https://i.ibb.co/Jr7Wh1d/challenges.jpg" width="250" alt="legs" class="first-column">
+    <main>
+      <!-- first column: -->
+      <img src="https://i.ibb.co/Jr7Wh1d/challenges.jpg" width="250" alt="legs" class="first-column">
 
-    <!-- second column: -->
-    <div class="second-column">
-      <p><strong>$65.00</strong></p>
-      <p class="shipping_cost">Free shipping</p>
-      <p class="ready">Ready to dress up or down, these classic canvas Chucks are an everyday wardrobe staple.</p>
-      <a class="info" href="#">More information &rarr;</a>
-      <div>
-        <div class="cube black"></div>
-        <div class="cube blue"></div>
-        <div class="cube red"></div>
-        <div class="cube orange"></div>
-        <div class="cube green"></div>
-        <div class="cube brown"></div>
+      <!-- second column: -->
+      <div class="second-column">
+        <div class="const-and-price">
+          <p><strong>$65.00</strong></p>
+          <p class="shipping_cost">Free shipping</p>
+        </div>
+
+        <p class="ready">Ready to dress up or down, these classic canvas Chucks are an everyday wardrobe staple.</p>
+        <a class="info" href="#">More information &rarr;</a>
+        <div class="cubes">
+          <div class="cube black"></div>
+          <div class="cube blue"></div>
+          <div class="cube red"></div>
+          <div class="cube orange"></div>
+          <div class="cube green"></div>
+          <div class="cube brown"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- third column: -->
-    <div class="third-column">
-      <h3>Product details</h3>
-      <ul>
-        <li>Lightweight, durable canvas sneaker</li>
-        <li>Lightly padded footed for added comfort</li>
-        <li>Iconic Chuck Taylor ankle patch.</li>
-      </ul>
-    </div>
+      <!-- third column: -->
+      <div class="third-column">
+        <h3>Product details</h3>
+        <ul>
+          <li>Lightweight, durable canvas sneaker</li>
+          <li>Lightly padded footed for added comfort</li>
+          <li>Iconic Chuck Taylor ankle patch.</li>
+        </ul>
+      </div>
+    </main>
 
     <button class="btn">Add to cart</button>
   </article>
