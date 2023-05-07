@@ -138,15 +138,30 @@
       background-color: brown;
     }
 
-    /* position: */
+    /* position: with grid */
+    article {
+      display: grid;
+      grid-template-columns: 250px 1fr 1fr;
+      column-gap: 50px;
+    }
+
+    h2 {
+      grid-column: 1 / -1;
+    }
+
     .first-column {}
 
-    .second-column {}
+    .second-column {
+      align-self: center;
+    }
 
-    .third-column {}
+    .third-column {
+      align-self: center;
+    }
 
-    .btn {}
-
+    .btn {
+      grid-column: 1 / -1;
+    }
   </style>
 </head>
 
